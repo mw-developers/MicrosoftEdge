@@ -39,19 +39,15 @@
         "No active development",
         "No public signals",
         "Not currently planned",
-		"Not Supported",
-		"Not Supported (DeviceOrientation is supported https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation#DeviceOrientationEvent)",
-		"Partial Support",
-		"Partial Support (Only `never`, `always`, `origin`, `default` tokens are supported for navigation)",
-		"Partial Support (WebAuthn only)",
-		"Partial Support (webkitdirectory attribute https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/webkitdirectory)",
+        "Not Supported",
+        "Partial Support",
         "Prefixed",
-		"Preview Release",
-		"Provided-by-underlying-OS (Non-public target Win10 20H2)",
+        "Preview Release",
+        "Provided-by-underlying-OS",
         "Removed",
-		"Shipped",
-		"Supported",
-		"Under Consideration"
+        "Shipped",
+        "Supported",
+        "Under Consideration"
       ],
       "type": "string"
     },
@@ -149,6 +145,17 @@
         "required": [
           "text"
         ]
+      },
+      "edgechromiumoverride": {
+        "additionalProperties": false,
+        "properties": {
+          "status_text": {
+            "$ref": "#/definitions/implementation_statuses"
+          },
+          "supported_buildnum": {
+            "type": "number"
+          }
+        }
       },
       "impl_status_chrome": {
         "$ref": "#/definitions/implementation_statuses"
